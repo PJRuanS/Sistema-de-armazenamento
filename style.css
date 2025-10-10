@@ -1,0 +1,139 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+}
+
+/* ===== BODY ===== */
+body {
+  background-color: #f4f6f8;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 30px;
+  
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 950px;
+  padding: 30px;
+}
+
+/* ===== TÍTULO ===== */
+h1 {
+  text-align: center;
+  color: #1100ff;
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+/* ===== FORMULÁRIO ===== */
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="number"] {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px;
+  border: 2px solid #004A8D;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+  font-size: 15px;
+  color: #333;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #e2880a;
+  box-shadow: 0 0 6px rgba(242, 140, 0, 0.5);
+}
+
+input::placeholder {
+  color: #888;
+}
+
+button {
+  background-color: #004A8D;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #F28C00;
+  transform: scale(1.05);
+}
+
+button.edit {
+  background-color: #F28C00;
+  margin-right: 5px;
+}
+
+button.delete {
+  background-color: #b80000;
+}
+
+button.edit:hover {
+  background-color: #d77a00;
+}
+
+button.delete:hover {
+  background-color: #800000;
+}
+
+#gerarPDF {
+  width: 100%;
+  margin-top: 15px;
+}
+
+/* ===== TABELA ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+thead {
+  background-color: #044b8d;
+  color: white;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #eef4ff;
+}
+
+td img {
+  width: 100px;
+  height: auto;
+}
