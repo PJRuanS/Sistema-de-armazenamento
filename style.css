@@ -4,7 +4,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- 
 }
 
 /* ===== BODY ===== */
@@ -16,9 +15,9 @@ body {
   align-items: flex-start;
   min-height: 100vh;
   padding: 30px;
-  
 }
 
+/* ===== CONTAINER ===== */
 .container {
   background-color: #fff;
   border-radius: 12px;
@@ -26,6 +25,7 @@ body {
   width: 90%;
   max-width: 950px;
   padding: 30px;
+  transition: all 0.3s ease;
 }
 
 /* ===== TÍTULO ===== */
@@ -34,6 +34,7 @@ h1 {
   color: #1100ff;
   margin-bottom: 25px;
   font-size: 2rem;
+  word-wrap: break-word;
 }
 
 /* ===== FORMULÁRIO ===== */
@@ -108,11 +109,17 @@ button.delete:hover {
 }
 
 /* ===== TABELA ===== */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto; /* 👈 faz a tabela deslizar horizontalmente em telas pequenas */
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
   text-align: center;
   margin-bottom: 20px;
+  min-width: 600px; /* 👈 garante que a tabela mantenha estrutura mínima */
 }
 
 thead {
@@ -123,6 +130,7 @@ thead {
 th, td {
   padding: 10px;
   border: 1px solid #ccc;
+  word-break: break-word;
 }
 
 tbody tr:nth-child(even) {
@@ -136,4 +144,69 @@ tbody tr:hover {
 td img {
   width: 100px;
   height: auto;
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
+/* Tablets (até 768px) */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  .container {
+    padding: 20px;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  button {
+    width: 100%;
+  }
+
+  button {
+    padding: 12px;
+  }
+
+  td img {
+    width: 80px;
+  }
+}
+
+/* Celulares pequenos (até 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  input,
+  button {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  table {
+    font-size: 13px;
+    min-width: 480px; /* 👈 permite scroll horizontal */
+  }
+
+  td img {
+    width: 60px;
+  }
 }
